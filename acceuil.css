@@ -1,0 +1,242 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+   
+}
+
+
+/* Page d'introduction */
+
+.intro {
+    min-height: 100vh;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    padding: 40px 20px 80px;
+    background:linear-gradient(
+            135deg,
+            rgba(0, 55, 130, 0.94),
+            rgba(8, 30, 65, 0.96)
+        ),
+        url("image/sns.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+    background-attachment: fixed;;
+    overflow: hidden;
+}
+
+
+/* Décorations */
+
+.intro::before {
+    content: "";
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    position: absolute;
+    top: -180px;
+    right: -150px;
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.intro::after {
+    content: "";
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -170px;
+    left: -120px;
+    background: rgba(245, 196, 0, 0.08);
+}
+
+
+/* Conteneur */
+
+.intro-container {
+    width: 100%;
+    max-width: 850px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+
+/* Logo */
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 45px;
+}
+
+.logo img {
+    display: block;
+    width: 150px;
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* Contenu */
+
+.intro-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.subtitle {
+    color: #f5c400;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    line-height: 1.5;
+    margin-bottom: 18px;
+}
+
+.intro-content h1 {
+    color: #ffffff;
+    font-size: 52px;
+    line-height: 1.15;
+    margin-bottom: 25px;
+}
+
+.description {
+    max-width: 680px;
+    color: rgba(255, 255, 255, 0.88);
+    font-size: 17px;
+    line-height: 1.7;
+    margin-bottom: 35px;
+}
+
+
+/* Bouton */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 14px 25px;
+    background: #f5c400;
+    color: #1d2a3a;
+    text-decoration: none;
+    border-radius: 7px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.btn span {
+    font-size: 21px;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Texte inférieur */
+
+.bottom-text {
+    position: absolute;
+    bottom: 25px;
+    z-index: 1;
+    width: 100%;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.bottom-text p {
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 13px;
+}
+
+
+/* Responsive tablette */
+
+@media (max-width: 768px) {
+
+    .intro {
+        padding: 35px 20px 80px;
+    }
+
+    .logo {
+        margin-bottom: 35px;
+    }
+
+    .logo img {
+        width: 135px;
+    }
+
+    .intro-content h1 {
+        font-size: 42px;
+    }
+
+    .description {
+        font-size: 16px;
+    }
+}
+
+
+/* Responsive téléphone */
+
+@media (max-width: 500px) {
+
+    .intro {
+        padding: 30px 18px 80px;
+    }
+
+    .intro-container {
+        width: 100%;
+    }
+
+    .logo {
+        margin-bottom: 30px;
+    }
+
+    .logo img {
+        width: 115px;
+    }
+
+    .subtitle {
+        font-size: 11px;
+        letter-spacing: 1.3px;
+    }
+
+    .intro-content h1 {
+        font-size: 34px;
+    }
+
+    .description {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    .btn {
+        padding: 13px 20px;
+        font-size: 15px;
+    }
+
+    .bottom-text {
+        bottom: 18px;
+    }
+}
