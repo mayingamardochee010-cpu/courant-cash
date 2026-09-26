@@ -1,0 +1,270 @@
+```css
+/* ============================= */
+/* RÉINITIALISATION */
+/* ============================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ============================= */
+/* PAGE */
+/* ============================= */
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7fa;
+    min-height: 100vh;
+}
+
+
+/* ============================= */
+/* CONTENEUR PRINCIPAL */
+/* ============================= */
+
+.verification-page {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+}
+
+
+/* ============================= */
+/* BOÎTE DE VÉRIFICATION */
+/* ============================= */
+
+.verification-box {
+    width: 100%;
+    max-width: 430px;
+
+    background: #ffffff;
+
+    padding: 40px 30px;
+
+    border-radius: 15px;
+
+    text-align: center;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+.error {
+    color: red;
+    font-size: 14px;
+    margin-top: 12px;
+    text-align: center;
+}
+
+
+/* ============================= */
+/* ICÔNE */
+/* ============================= */
+
+.icon-verification {
+    width: 70px;
+    height: 70px;
+
+    margin: 0 auto 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #eaf2ff;
+
+    border-radius: 50%;
+
+    color: #1769e0;
+
+    font-size: 30px;
+}
+
+
+/* ============================= */
+/* TITRE */
+/* ============================= */
+
+.verification-box h1 {
+    font-size: 26px;
+
+    color: #172033;
+
+    margin-bottom: 12px;
+}
+
+
+/* ============================= */
+/* DESCRIPTION */
+/* ============================= */
+
+.description {
+    color: #666;
+
+    font-size: 15px;
+
+    line-height: 1.6;
+
+    margin-bottom: 30px;
+}
+
+
+/* ============================= */
+/* CASES OTP */
+/* ============================= */
+
+.otp-container {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    margin-bottom: 20px;
+}
+
+
+.otp-input {
+    width: 48px;
+    height: 55px;
+
+    border: 1px solid #d5d9e2;
+
+    border-radius: 8px;
+
+    text-align: center;
+
+    font-size: 22px;
+
+    font-weight: bold;
+
+    outline: none;
+
+    transition: 0.2s;
+}
+
+
+.otp-input:focus {
+    border-color: #1769e0;
+
+    box-shadow: 0 0 0 3px rgba(23, 105, 224, 0.12);
+}
+
+
+/* ============================= */
+/* MESSAGE */
+/* ============================= */
+
+#verificationMessage {
+    min-height: 22px;
+
+    margin-bottom: 15px;
+
+    font-size: 14px;
+
+    color: #1769e0;
+}
+
+
+/* ============================= */
+/* RENVOYER LE CODE */
+/* ============================= */
+
+.resend-text {
+    color: #666;
+
+    font-size: 14px;
+
+    margin-bottom: 6px;
+}
+
+
+.resend-code {
+    display: inline-block;
+
+    color: #1769e0;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+    margin-bottom: 25px;
+}
+
+
+.resend-code:hover {
+    text-decoration: underline;
+}
+
+
+.resend-code.disabled {
+    color: #999;
+
+    pointer-events: none;
+
+    cursor: default;
+}
+
+
+/* ============================= */
+/* BOUTON VÉRIFIER */
+/* ============================= */
+
+.btn-verify {
+    width: 100%;
+
+    border: none;
+
+    background: #1769e0;
+
+    color: #ffffff;
+
+    padding: 13px 20px;
+
+    border-radius: 8px;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.btn-verify:hover {
+    background: #1258bd;
+}
+
+
+/* ============================= */
+/* RESPONSIVE */
+/* ============================= */
+
+@media (max-width: 480px) {
+
+    .verification-box {
+        padding: 30px 20px;
+    }
+
+
+    .otp-container {
+        gap: 6px;
+    }
+
+
+    .otp-input {
+        width: 42px;
+        height: 50px;
+    }
+
+}
+```

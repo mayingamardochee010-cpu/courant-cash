@@ -33,7 +33,7 @@
                 pour recevoir un code de vérification.
             </p>
 
-            <form action="verification.html">
+            <form id="forgotForm">
 
                 <div class="input-group">
 
@@ -49,9 +49,12 @@
                             type="tel"
                             id="telephone"
                             placeholder="Entrez votre numéro"
+                            inputmode="tel"
                         >
 
                     </div>
+
+                    <p id="telephoneError" class="error"></p>
 
                 </div>
 
@@ -68,6 +71,8 @@
         </section>
 
     </main>
+
+    <script src="mot de passe.js"></script>
 
 </body>
 

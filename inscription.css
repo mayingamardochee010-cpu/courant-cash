@@ -22,6 +22,11 @@ body{
 
     background-attachment: fixed;
 }
+.error {
+    color: red;
+    font-size: 13px;
+    margin-top: 5px;
+}
 
 .inscription-page {
 

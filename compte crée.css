@@ -1,0 +1,243 @@
+```css
+/* ============================= */
+/* RÉINITIALISATION */
+/* ============================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ============================= */
+/* PAGE */
+/* ============================= */
+
+body {
+    font-family: Arial, sans-serif;
+    background: #06152f;
+    min-height: 100vh;
+}
+
+
+/* ============================= */
+/* CONTENEUR PRINCIPAL */
+/* ============================= */
+
+.success-page {
+    position: relative;
+
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px;
+
+    overflow: hidden;
+
+    color: white;
+}
+
+
+/* ============================= */
+/* EFFETS LUMINEUX */
+/* ============================= */
+
+.glow {
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    border-radius: 50%;
+
+    filter: blur(100px);
+
+    opacity: 0.35;
+}
+
+
+.glow-one {
+    background: #1769e0;
+
+    top: -100px;
+    left: -100px;
+}
+
+
+.glow-two {
+    background: #ffd000;
+
+    bottom: -120px;
+    right: -100px;
+}
+
+
+/* ============================= */
+/* CONTENU */
+/* ============================= */
+
+.success-content {
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+    max-width: 450px;
+
+    text-align: center;
+
+    padding: 35px 25px;
+}
+
+
+/* ============================= */
+/* LOGO */
+/* ============================= */
+
+.logo-container {
+    margin-bottom: 25px;
+}
+
+
+.logo-container img {
+    width: 100px;
+
+    height: auto;
+}
+
+
+/* ============================= */
+/* ICÔNE SUCCÈS */
+/* ============================= */
+
+.success-icon {
+    margin-bottom: 20px;
+
+    font-size: 65px;
+
+    color: #22c55e;
+}
+
+
+/* ============================= */
+/* TITRE */
+/* ============================= */
+
+.success-content h1 {
+    font-size: 28px;
+
+    margin-bottom: 18px;
+
+    color: white;
+}
+
+
+/* ============================= */
+/* MESSAGE */
+/* ============================= */
+
+.message {
+    font-size: 17px;
+
+    line-height: 1.6;
+
+    margin-bottom: 10px;
+}
+
+
+.description {
+    color: #cbd5e1;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+    margin-bottom: 30px;
+}
+
+
+/* ============================= */
+/* BOUTON */
+/* ============================= */
+
+.btn-access {
+    display: inline-block;
+
+    width: 100%;
+
+    padding: 14px 20px;
+
+    background: #1769e0;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 8px;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+
+.btn-access:hover {
+    background: #1258bd;
+
+    transform: translateY(-2px);
+}
+
+
+/* ============================= */
+/* BAS DE PAGE */
+/* ============================= */
+
+.bottom {
+    position: absolute;
+
+    bottom: 20px;
+
+    left: 0;
+
+    width: 100%;
+
+    text-align: center;
+
+    color: #94a3b8;
+
+    font-size: 13px;
+
+    z-index: 2;
+}
+
+
+/* ============================= */
+/* RESPONSIVE */
+/* ============================= */
+
+@media (max-width: 480px) {
+
+    .success-content {
+        padding: 25px 15px;
+    }
+
+    .success-content h1 {
+        font-size: 24px;
+    }
+
+    .success-icon {
+        font-size: 55px;
+    }
+
+    .logo-container img {
+        width: 85px;
+    }
+
+}
+```

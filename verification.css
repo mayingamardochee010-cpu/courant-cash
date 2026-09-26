@@ -101,7 +101,12 @@ body {
 
     margin-bottom: 40px;
 }
-
+.error {
+    color: red;
+    font-size: 13px;
+    margin-top: 10px;
+    text-align: center;
+}
 
 .otp-container {
     display: flex;

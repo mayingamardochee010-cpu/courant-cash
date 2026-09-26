@@ -1,91 +1,92 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
+
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>courant cash-page inscription</title>
-	<link rel="stylesheet" type="text/css" href="inscription.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Courant Cash - Page inscription</title>
+
+    <link rel="stylesheet" type="text/css" href="inscription.css">
 </head>
+
 <body>
-	<main class="inscription-page">
-		<!-- <div class="logo">
 
-            <div class="logo-img">
-                <img src="image/logo1.png">
-            </div> -->
+    <main class="inscription-page">
 
-        </div>
-
-
-      
         <section class="inscription-box">
 
             <h1>Créer un compte</h1>
 
             <p class="welcome">
-                Remplicez les information ci-dessous pour commencer
+                Remplissez les informations ci-dessous pour commencer
             </p>
 
-
-            <form>
-
-                <div class="input-group">
-
-                    <label for="nom">
-                        Nom complet
-                    </label>
-
-                    <div class="input-container">
-                    	<input type="nom" name="" placeholder="Entrez votre nom complet">
-
-                    </div>
-
-                </div>
-
+            <form id="inscriptionForm">
 
                 <div class="input-group">
 
-                    <label for="telephone">
-                        Numéro de téléphone
-                    </label>
+                    <label for="nom">Nom complet</label>
 
                     <div class="input-container">
-                    	<input type="tel" name="" placeholder="Entrez votre numéro">
-
-                    </div>
-
-                </div>
-
-                 <div class="input-group">
-
-                    <label for="telephone">
-                        Adresse
-                    </label>
-
-                    <div class="input-container">
-                    	<input type="nom" name="" placeholder="Entrez votre adresse">
-
-                    </div>
-
-                </div>
-                
-
-                <div class="input-group">
-
-                    <label for="password">
-                        Mot de passe
-                    </label>
-
-                    <div class="input-container">
-
-                       
-
                         <input
-                            type="password" name="" placeholder="Votre mot de passe">
-
+                            type="text"
+                            id="nom"
+                            placeholder="Entrez votre nom complet">
                     </div>
 
+                    <p class="error" id="nomError"></p>
+
                 </div>
+
+
+                <div class="input-group">
+
+                    <label for="telephone">Numéro de téléphone</label>
+
+                    <div class="input-container">
+                        <input
+                            type="tel"
+                            id="telephone"
+                            placeholder="Entrez votre numéro">
+                    </div>
+
+                    <p class="error" id="telephoneError"></p>
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label for="adresse">Adresse</label>
+
+                    <div class="input-container">
+                        <input
+                            type="text"
+                            id="adresse"
+                            placeholder="Entrez votre adresse">
+                    </div>
+
+                    <p class="error" id="adresseError"></p>
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label for="password">Mot de passe</label>
+
+                    <div class="input-container">
+                        <input
+                            type="password"
+                            id="password"
+                            placeholder="Votre mot de passe">
+                    </div>
+
+                    <p class="error" id="passwordError"></p>
+
+                </div>
+
 
                 <div class="input-group">
 
@@ -94,32 +95,29 @@
                     </label>
 
                     <div class="input-container">
-
                         <input
-                            type="password" name=""placeholder="Confirmez votre mot de passe">
-
+                            type="password"
+                            id="confirm-password"
+                            placeholder="Confirmez votre mot de passe">
                     </div>
+
+                    <p class="error" id="confirmPasswordError"></p>
 
                 </div>
 
-                <a href="#" class="btn-register">
-                    Créer mon compte
-                </a>
-                   
-                    
 
-                
+                <button type="submit" class="btn-register">
+                    Créer mon compte
+                </button>
 
             </form>
 
-            </div>
-
         </section>
-	</main>
 
+    </main>
+
+    <script src="inscription.js"></script>
 
 </body>
 
-</html>
-</body>
 </html>

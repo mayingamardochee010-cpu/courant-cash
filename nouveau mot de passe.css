@@ -24,6 +24,11 @@ body {
 
     color: #12345b;
 }
+.error {
+    color: red;
+    font-size: 13px;
+    margin-top: 5px;
+}
 
 .new-password-page {
     min-height: 100vh;

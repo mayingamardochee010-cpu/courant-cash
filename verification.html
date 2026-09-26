@@ -20,7 +20,6 @@
 
         <section class="verification-box">
 
-            <!-- ICÔNE -->
             <div class="icon-verification">
                 <i class="fa-solid fa-shield-halved"></i>
             </div>
@@ -29,62 +28,48 @@
                 Vérification
             </h1>
 
-
             <p class="description">
                 Entrez le code de vérification<br>
                 envoyé à votre numéro de téléphone.
             </p>
 
-            <form action="nouveau mot de passe.html">
+            <form id="verificationForm">
 
                 <div class="otp-container">
 
-                    <input
-                        type="text"
-                        maxlength="1"
-                        inputmode="numeric"
-                        class="otp-input"
-                        autofocus>
+                    <input type="text" maxlength="1" inputmode="numeric"
+                        class="otp-input" autofocus>
 
-                    <input
-                        type="text"
-                        maxlength="1"
-                        inputmode="numeric"
+                    <input type="text" maxlength="1" inputmode="numeric"
                         class="otp-input">
 
-                    <input
-                        type="text"
-                        maxlength="1"
-                        inputmode="numeric"
+                    <input type="text" maxlength="1" inputmode="numeric"
                         class="otp-input">
 
-                    <input
-                        type="text"
-                        maxlength="1"
-                        inputmode="numeric"
+                    <input type="text" maxlength="1" inputmode="numeric"
                         class="otp-input">
 
-                    <input
-                        type="text"
-                        maxlength="1"
-                        inputmode="numeric"
+                    <input type="text" maxlength="1" inputmode="numeric"
                         class="otp-input">
 
-                    <input
-                        type="text"
-                        maxlength="1"
-                        inputmode="numeric"
+                    <input type="text" maxlength="1" inputmode="numeric"
                         class="otp-input">
 
                 </div>
+
+                <p id="otpError" class="error"></p>
+
 
                 <p class="resend-text">
                     Vous n'avez pas reçu le code ?
                 </p>
 
-                <a href="#" class="resend-code">
+                <a href="#" class="resend-code" id="resendCode">
                     Renvoyer le code
                 </a>
+
+                <p id="resendMessage"></p>
+
 
                 <button
                     type="submit"
@@ -99,6 +84,9 @@
         </section>
 
     </main>
+
+
+    <script src="verification.js"></script>
 
 </body>
 

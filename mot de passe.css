@@ -23,6 +23,11 @@ body {
 
     color: #12345b;
 }
+.error {
+    color: red;
+    font-size: 13px;
+    margin-top: 6px;
+}
 
 .forgot-page {
     min-height: 100vh;

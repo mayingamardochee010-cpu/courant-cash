@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Vérification - Courant Cash</title>
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="verification.css">
+</head>
+
+<body>
+
+    <main class="verification-page">
+
+        <section class="verification-box">
+
+            <div class="icon-verification">
+                <i class="fa-solid fa-shield-halved"></i>
+            </div>
+
+            <h1>Vérification du numéro</h1>
+
+            <p class="description">
+                Un code de vérification a été envoyé
+                à votre numéro de téléphone.
+            </p>
+
+            <form id="verificationForm">
+
+                <div class="otp-container">
+
+                    <input type="text"
+                        maxlength="1"
+                        inputmode="numeric"
+                        class="otp-input"
+                        autofocus>
+
+                    <input type="text"
+                        maxlength="1"
+                        inputmode="numeric"
+                        class="otp-input">
+
+                    <input type="text"
+                        maxlength="1"
+                        inputmode="numeric"
+                        class="otp-input">
+
+                    <input type="text"
+                        maxlength="1"
+                        inputmode="numeric"
+                        class="otp-input">
+
+                    <input type="text"
+                        maxlength="1"
+                        inputmode="numeric"
+                        class="otp-input">
+
+                    <input type="text"
+                        maxlength="1"
+                        inputmode="numeric"
+                        class="otp-input">
+
+                </div>
+
+                <p id="verificationMessage" class="error"></p>
+
+                <p class="resend-text">
+                    Vous n'avez pas reçu le code ?
+                </p>
+
+                <a href="#" class="resend-code" id="resendCode">
+                    Renvoyer le code
+                </a>
+
+                <button type="submit" class="btn-verify">
+                    Vérifier
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+    <script>
+
+        const otpInputs = document.querySelectorAll(".otp-input");
+
+        const verificationForm =
+            document.getElementById("verificationForm");
+
+        const verificationMessage =
+            document.getElementById("verificationMessage");
+
+
+        /* PASSAGE AUTOMATIQUE */
+
+        otpInputs.forEach((input, index) => {
+
+            input.addEventListener("input", function () {
+
+                this.value = this.value.replace(/[^0-9]/g, "");
+
+                verificationMessage.textContent = "";
+
+                if (
+                    this.value !== "" &&
+                    index < otpInputs.length - 1
+                ) {
+                    otpInputs[index + 1].focus();
+                }
+
+            });
+
+
+            /* RETOUR AVEC BACKSPACE */
+
+            input.addEventListener("keydown", function (event) {
+
+                if (
+                    event.key === "Backspace" &&
+                    this.value === "" &&
+                    index > 0
+                ) {
+                    otpInputs[index - 1].focus();
+                }
+
+            });
+
+        });
+
+
+        /* VÉRIFICATION */
+
+        verificationForm.addEventListener("submit", function (event) {
+
+            event.preventDefault();
+
+            let code = "";
+
+            otpInputs.forEach(function (input) {
+                code += input.value;
+            });
+
+
+            if (code.length !== 6) {
+
+                verificationMessage.textContent =
+                    "Veuillez entrer les 6 chiffres du code.";
+
+                return;
+            }
+
+
+            verificationMessage.textContent =
+                "Vérification réussie !";
+
+
+            setTimeout(function () {
+
+                window.location.href = "compte crée.html";
+
+            }, 1000);
+
+        });
+
+
+        /* RENVOYER LE CODE */
+
+        const resendCode =
+            document.getElementById("resendCode");
+
+        let countdown = 30;
+        let timer;
+
+
+        resendCode.addEventListener("click", function (event) {
+
+            event.preventDefault();
+
+            if (resendCode.classList.contains("disabled")) {
+                return;
+            }
+
+            resendCode.classList.add("disabled");
+
+            countdown = 30;
+
+            resendCode.textContent =
+                "Renvoyer le code (" + countdown + "s)";
+
+
+            timer = setInterval(function () {
+
+                countdown--;
+
+                resendCode.textContent =
+                    "Renvoyer le code (" + countdown + "s)";
+
+
+                if (countdown <= 0) {
+
+                    clearInterval(timer);
+
+                    resendCode.classList.remove("disabled");
+
+                    resendCode.textContent =
+                        "Renvoyer le code";
+
+                }
+
+            }, 1000);
+
+        });
+
+    </script>
+
+</body>
+
+</html>
