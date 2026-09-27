@@ -1,4 +1,6 @@
-
+/* ============================= */
+/* RESET */
+/* ============================= */
 
 * {
     margin: 0;
@@ -6,6 +8,10 @@
     box-sizing: border-box;
 }
 
+
+/* ============================= */
+/* STYLE GÉNÉRAL */
+/* ============================= */
 
 html {
     scroll-behavior: smooth;
@@ -22,6 +28,11 @@ body {
     display: none;
 }
 
+
+/* ============================= */
+/* EN-TÊTE */
+/* ============================= */
+
 .about-header,
 .page-header {
     position: relative;
@@ -30,7 +41,7 @@ body {
 
     padding: 110px 8% 80px;
 
-   background:
+    background:
         linear-gradient(
             135deg,
             rgba(0, 55, 130, 0.94),
@@ -41,9 +52,6 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
-
-    color: #12345b;
 
     color: #ffffff;
 
@@ -55,6 +63,10 @@ body {
     justify-content: center;
 }
 
+
+/* ============================= */
+/* LOGO */
+/* ============================= */
 
 .logo {
     display: flex;
@@ -72,6 +84,10 @@ body {
     display: block;
 }
 
+
+/* ============================= */
+/* TEXTES DU HEADER */
+/* ============================= */
 
 .label,
 .section-label {
@@ -104,6 +120,10 @@ body {
 }
 
 
+/* ============================= */
+/* BOUTON PRINCIPAL */
+/* ============================= */
+
 .cta-button {
     display: inline-block;
 
@@ -126,6 +146,11 @@ body {
 
     transform: translateY(-3px);
 }
+
+
+/* ============================= */
+/* ICÔNE MENU MOBILE */
+/* ============================= */
 
 .menu-icon {
     display: none;
@@ -152,6 +177,11 @@ body {
 
     z-index: 1100;
 }
+
+
+/* ============================= */
+/* MENU ORDINATEUR */
+/* ============================= */
 
 .about-menu {
     position: absolute;
@@ -201,11 +231,6 @@ body {
     transform: translateY(-2px);
 }
 
-
-/* ============================= */
-/* FERMER - CACHÉ SUR PC */
-/* ============================= */
-
 .close-menu {
     display: none;
 }
@@ -238,6 +263,10 @@ body {
 }
 
 
+/* ============================= */
+/* SECTIONS */
+/* ============================= */
+
 .about-section {
     padding: 85px 8%;
 }
@@ -253,6 +282,10 @@ body {
     margin: auto;
 }
 
+
+/* ============================= */
+/* AVANTAGES */
+/* ============================= */
 
 .advantages {
     padding: 85px 8%;
@@ -319,6 +352,9 @@ body {
 }
 
 
+/* ============================= */
+/* FONCTIONNEMENT */
+/* ============================= */
 
 .how-section {
     padding: 85px 8%;
@@ -373,6 +409,10 @@ body {
 }
 
 
+/* ============================= */
+/* FOOTER */
+/* ============================= */
+
 footer {
     padding: 25px;
 
@@ -398,13 +438,11 @@ footer p {
 
     .about-menu {
         right: 2%;
-
         gap: 5px;
     }
 
     .menu-button {
         padding: 9px 9px;
-
         font-size: 11px;
     }
 
@@ -426,11 +464,25 @@ footer p {
 
 @media (max-width: 600px) {
 
-    .about-header,
-    .page-header {
+    /* ============================= */
+    /* PAGE À PROPOS */
+    /* ============================= */
+
+    .about-header {
         min-height: 100vh;
 
         padding: 90px 7% 50px;
+    }
+
+
+    /* ============================= */
+    /* AUTRES PAGES */
+    /* ============================= */
+
+    .page-header {
+        min-height: auto;
+
+        padding: 80px 7% 45px;
     }
 
 
@@ -461,10 +513,11 @@ footer p {
         top: 0;
         right: -100%;
 
-        width: 100%;
-        height: 100vh;
+        width: 85%;
+        height: auto;
+        max-height: 90vh;
 
-        padding: 80px 25px 30px;
+        padding: 70px 20px 25px;
 
         background: #003b7a;
 
@@ -474,18 +527,20 @@ footer p {
         align-items: stretch;
         justify-content: flex-start;
 
-        gap: 15px;
+        gap: 12px;
 
         overflow-y: auto;
 
         z-index: 1050;
+
+        border-radius: 0 0 0 15px;
 
         transition: right 0.3s ease;
     }
 
 
     /* ============================= */
-    /* OUVERTURE */
+    /* OUVERTURE DU MENU */
     /* ============================= */
 
     #menu-toggle:checked ~ .about-menu {
@@ -510,7 +565,7 @@ footer p {
 
         cursor: pointer;
 
-        margin-bottom: 20px;
+        margin-bottom: 15px;
     }
 
 
@@ -521,7 +576,7 @@ footer p {
     .menu-button {
         width: 100%;
 
-        padding: 15px;
+        padding: 12px;
 
         background: #0057b8;
 
@@ -531,7 +586,7 @@ footer p {
 
         text-align: center;
 
-        font-size: 15px;
+        font-size: 14px;
 
         white-space: normal;
     }
@@ -549,6 +604,10 @@ footer p {
     /* LOGO */
     /* ============================= */
 
+    .logo {
+        margin-bottom: 25px;
+    }
+
     .logo img {
         width: 160px;
     }
@@ -565,6 +624,7 @@ footer p {
 
     .intro-text {
         font-size: 15px;
+        margin-bottom: 25px;
     }
 
 
@@ -573,7 +633,7 @@ footer p {
     /* ============================= */
 
     .content-page {
-        padding: 65px 7%;
+        padding: 55px 7%;
     }
 
     .content-page h2 {
@@ -582,12 +642,29 @@ footer p {
 
 
     /* ============================= */
-    /* CARTES */
+    /* AVANTAGES */
     /* ============================= */
+
+    .advantages {
+        padding: 60px 7%;
+    }
+
+    .section-title h2 {
+        font-size: 28px;
+    }
 
     .cards,
     .steps {
         grid-template-columns: 1fr;
+    }
+
+
+    /* ============================= */
+    /* FONCTIONNEMENT */
+    /* ============================= */
+
+    .how-section {
+        padding: 60px 7%;
     }
 
     .step {
